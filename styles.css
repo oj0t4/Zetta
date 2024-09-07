@@ -9,40 +9,34 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
-<head>
-    <link rel="stylesheet" href="styles.css">
-</head>
 
 .header {
-
     position: relative;
     overflow: hidden;
 }
 
 .banner {
+    background: url('banner-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
     position: relative;
-    height: 100vh; /* A altura será de 100% da viewport */
     overflow: hidden;
 }
 
-.banner-video {
+.animated-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1; /* Coloca o vídeo atrás do texto */
-}
-
-.animated-text, .banner-content {
-    position: relative;
-    z-index: 1; /* Coloca o texto na frente do vídeo */
-    color: white;
-    text-align: center;
     font-size: 2em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+    text-align: center;
+    animation: fadeInOut 12s infinite;
 }
 
 .animated-text span {
@@ -53,6 +47,20 @@ body {
 @keyframes fadeInOut {
     0%, 33.33%, 100% { opacity: 0; }
     16.66%, 50% { opacity: 1; }
+}
+
+.banner-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.banner h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.5em;
 }
 
 .statistics {
@@ -68,14 +76,15 @@ body {
     background: #f4f4f4;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
     width: 180px;
-    text-align: center;
 }
 
 .stat i {
     font-size: 3em;
     color: #333;
     margin-bottom: 10px;
+    display: block;
 }
 
 .stat h2 {
@@ -85,6 +94,11 @@ body {
 
 .stat p {
     font-size: 1.2em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .services, .portfolio {
