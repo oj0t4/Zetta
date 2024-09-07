@@ -16,29 +16,29 @@ body {
 }
 
 .banner {
-    background: url('banner-image.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
     position: relative;
+    height: 100vh; /* A altura será de 100% da viewport */
     overflow: hidden;
 }
 
-.animated-text {
+.banner-video {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2em;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.6);
-    white-space: nowrap;
-    text-align: center;
-    animation: fadeInOut 12s infinite;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Coloca o vídeo atrás do texto */
 }
 
+.animated-text, .banner-content {
+    position: relative;
+    z-index: 1; /* Coloca o texto na frente do vídeo */
+    color: white;
+    text-align: center;
+}
 .animated-text span {
     display: block;
     animation: fadeInOut 12s infinite;
@@ -63,73 +63,4 @@ body {
     font-size: 1.5em;
 }
 
-.statistics {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fff;
-}
-
-.stat {
-    display: inline-block;
-    margin: 20px;
-    padding: 20px;
-    background: #f4f4f4;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    animation: fadeIn 2s ease-in-out;
-    width: 180px;
-}
-
-.stat i {
-    font-size: 3em;
-    color: #333;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.stat h2 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.stat p {
-    font-size: 1.2em;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.services, .portfolio {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.services h2, .portfolio h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.service-item, .portfolio-item {
-    background: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.service-item:hover, .portfolio-item:hover {
-    transform: scale(1.05);
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-}
+/* Restante do CSS para as outras seções */
