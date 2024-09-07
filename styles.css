@@ -16,29 +16,29 @@ body {
 }
 
 .banner {
-    background: url('banner-image.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
     position: relative;
+    height: 100vh; /* A altura será de 100% da viewport */
     overflow: hidden;
 }
 
-.animated-text {
+.banner-video {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2em;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.6);
-    white-space: nowrap;
-    text-align: center;
-    animation: fadeInOut 12s infinite;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Coloca o vídeo atrás do texto */
 }
 
+.animated-text, .banner-content {
+    position: relative;
+    z-index: 1; /* Coloca o texto na frente do vídeo */
+    color: white;
+    text-align: center;
+}
 .animated-text span {
     display: block;
     animation: fadeInOut 12s infinite;
