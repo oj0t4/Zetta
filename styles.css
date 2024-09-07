@@ -38,7 +38,9 @@ body {
     z-index: 1; /* Coloca o texto na frente do vídeo */
     color: white;
     text-align: center;
+    font-size: 2em;
 }
+
 .animated-text span {
     display: block;
     animation: fadeInOut 12s infinite;
@@ -47,20 +49,6 @@ body {
 @keyframes fadeInOut {
     0%, 33.33%, 100% { opacity: 0; }
     16.66%, 50% { opacity: 1; }
-}
-
-.banner-content {
-    text-align: center;
-    z-index: 1;
-}
-
-.banner h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
-}
-
-.banner p {
-    font-size: 1.5em;
 }
 
 .statistics {
@@ -76,15 +64,14 @@ body {
     background: #f4f4f4;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 5px;
-    animation: fadeIn 2s ease-in-out;
     width: 180px;
+    text-align: center;
 }
 
 .stat i {
     font-size: 3em;
     color: #333;
     margin-bottom: 10px;
-    display: block;
 }
 
 .stat h2 {
@@ -94,11 +81,6 @@ body {
 
 .stat p {
     font-size: 1.2em;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 .services, .portfolio {
@@ -133,4 +115,3 @@ footer {
 footer p {
     margin: 0;
 }
-
