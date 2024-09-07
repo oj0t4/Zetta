@@ -1,40 +1,83 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reseta margens e padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
-header .banner {
+.header {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner {
     background: url('banner-image.jpg') no-repeat center center/cover;
-    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.banner-content {
     text-align: center;
-    padding: 100px 0;
+    color: #fff;
+    animation: slideIn 1.5s ease-in-out;
 }
 
-header h1 {
-    font-size: 3em;
-    margin: 0;
+.banner h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
 }
 
-header p {
+.banner p {
     font-size: 1.5em;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 .services, .portfolio {
-    padding: 20px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.services h2, .portfolio h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .service-item, .portfolio-item {
     background: #fff;
     margin: 20px 0;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover, .portfolio-item:hover {
+    transform: scale(1.05);
 }
 
 footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
 }
