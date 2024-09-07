@@ -36,22 +36,17 @@ body {
     color: rgba(255, 255, 255, 0.6);
     white-space: nowrap;
     text-align: center;
-    animation: slideText 10s infinite;
+    animation: fadeInOut 12s infinite;
 }
 
 .animated-text span {
     display: block;
-    animation: fadeInOut 10s infinite;
-}
-
-@keyframes slideText {
-    0% { transform: translate(-50%, -50%) translateX(100%); }
-    100% { transform: translate(-50%, -50%) translateX(-100%); }
+    animation: fadeInOut 12s infinite;
 }
 
 @keyframes fadeInOut {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+    0%, 33.33%, 100% { opacity: 0; }
+    16.66%, 50% { opacity: 1; }
 }
 
 .banner-content {
@@ -138,3 +133,4 @@ footer {
 footer p {
     margin: 0;
 }
+
