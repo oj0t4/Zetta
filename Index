@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zetta - Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Bem-vindo à Zetta</h1>
+            <p>Transformando ideias em realidade</p>
+        </div>
+    </header>
+    <section class="services">
+        <h2>Nossos Serviços</h2>
+        <div class="service-item">
+            <h3>Consultoria</h3>
+            <p>Consultoria estratégica para seu negócio.</p>
+        </div>
+        <div class="service-item">
+            <h3>Desenvolvimento</h3>
+            <p>Desenvolvimento de soluções sob medida.</p>
+        </div>
+    </section>
+    <section class="portfolio">
+        <h2>Portfólio</h2>
+        <div class="portfolio-item">
+            <img src="project1.jpg" alt="Projeto 1">
+            <p>Descrição do Projeto 1</p>
+        </div>
+        <!-- Adicione mais itens do portfólio -->
+    </section>
+    <footer>
+        <p>© 2024 Zetta. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
