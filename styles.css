@@ -68,6 +68,36 @@ body {
     font-size: 1.5em;
 }
 
+.statistics {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.stat {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.stat h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 1.2em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .services, .portfolio {
     padding: 40px 20px;
     text-align: center;
