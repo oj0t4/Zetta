@@ -82,6 +82,14 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 5px;
     animation: fadeIn 2s ease-in-out;
+    width: 180px;
+}
+
+.stat i {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .stat h2 {
